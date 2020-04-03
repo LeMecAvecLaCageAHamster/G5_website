@@ -4,16 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Giant Mélenchon 2022</title>
+    <title>The living planisphere</title>
 
     <link rel="icon" type="image/png" href="logo_simple.png" />
 
     <!-- Main css -->
-    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="./css/home.css" />
 
-    <!-- LeafletJS -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
-    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
     <!-- Google Fonts (Roboto) -->
@@ -25,46 +22,30 @@
 </head>
 
 <body>
-    <img id="logo" class="text-center" src="logo_simple.png" alt="Logo">
-
-    <div id="map-container">
-        <div id="map"></div>
-
-        <br>
-
-        <!-- Year selection -->
-        <label for="years">Année : </label>
-        <select id="years" class="custom-select">
-            <option value="1">2006</option>
-            <option value="1">2010</option>
-            <option value="3" selected>2020</option>
-            <option value="4">2030</option>
-            <option value="5">2040</option>
-            <option value="6">2050</option>
-            <option value="7">2060</option>
-            <option value="8">2070</option>
-            <option value="9">2080</option>
-            <option value="10">2090</option>
-            <option value="11">2099</option>
-        </select>
-
-        <label for="months">Mois : </label>
-        <select id="months" class="custom-select">
-            <option value="1" selected>Janvier</option>
-            <option value="1">Février</option>
-            <option value="3">Mars</option>
-            <option value="4">Avril</option>
-            <option value="5">Mai</option>
-            <option value="6">Juin</option>
-            <option value="7">Juillet</option>
-            <option value="8">Août</option>
-            <option value="9">Septembre</option>
-            <option value="10">Octobre</option>
-            <option value="11">Novembre</option>
-            <option value="12">Décembre</option>
-        </select>
+    <div class="menu">
+        <div class="menuCircle">
+            <svg width="453" height="453" viewBox="0 0 453 453" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="226.5" cy="226.5" r="216.5" stroke="black" stroke-width="16"/>
+            </svg>
+            <img id="logoHome" class="text-center" src="./img/logo_simple.png" alt="Logo">
+        </div>
+        <div class="menuItems">
+            <div class="menuItem" id="project">
+                <svg height="300" width="300">
+                    <line x1="180" y1="120" x2="120" y2="180" style="stroke: black ;stroke-width:4"></line>
+                    <line x1="0" y1="180" x2="121" y2="180" style="stroke: black ;stroke-width:2.5"></line>
+                </svg>
+                <a href="index.html"><p class="title projectTitle" id="projectTitle">Le projet</p></a>
+            </div>
+            <div class="menuItem" id="team">
+                <svg height="300" width="300">
+                    <line x1="180" y1="120" x2="120" y2="180" style="stroke: black ;stroke-width:4"></line>
+                    <line x1="179" y1="120" x2="300" y2="120" style="stroke: black ;stroke-width:2.5"></line>
+                </svg>
+                <a href="team.html"><p class="title" id="teamTitle">L'équipe</p></a>
+            </div>
+        </div>
     </div>
-
 </body>
 
 <footer>
@@ -81,7 +62,7 @@
         src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.15.0/js/mdb.min.js"></script>
 
     <!-- Main script -->
-    <script src="index.js"></script>
+    <script src="./js/home.js"></script>
 </footer>
 
 </html>
