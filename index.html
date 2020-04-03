@@ -32,9 +32,17 @@
 
         <br>
 
+        <!-- Scenario selection -->
+        <label for="months">Scenario : </label>
+        <select id="scenario" class="custom-select" onchange="setGeoInformations()">
+            <option value="1" selected>1</option>
+            <option value="1">2</option>
+            <option value="3">3</option>
+        </select>
+
         <!-- Year selection -->
         <label for="years">Année : </label>
-        <select id="years" class="custom-select">
+        <select id="years" class="custom-select" onchange="setGeoInformations()">
             <option value="1">2006</option>
             <option value="1">2010</option>
             <option value="3" selected>2020</option>
@@ -48,8 +56,9 @@
             <option value="11">2099</option>
         </select>
 
+        <!-- Month selection -->
         <label for="months">Mois : </label>
-        <select id="months" class="custom-select">
+        <select id="months" class="custom-select" onchange="setGeoInformations()">
             <option value="1" selected>Janvier</option>
             <option value="1">Février</option>
             <option value="3">Mars</option>
