@@ -1,0 +1,36 @@
+body {
+    background: #11998e;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #38ef7d, #11998e);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #38ef7d, #11998e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+    color: white !important;
+}
+
+#logo {
+    position: absolute;
+    text-align: center;
+    padding: 1em;
+    width: 150px;
+}
+
+#map-container {
+    z-index: -1;
+    position: static;
+    padding-top: 2em;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+}
+
+#map {
+    display: inline-block;
+    width: 85%;
+    height: 80vh;
+    border: 1em solid white;
+}
+
+#years, #months {
+    text-align: center;
+    width: 10%;
+    margin: 1em;
+}
