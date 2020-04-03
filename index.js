@@ -39,7 +39,7 @@ function setGeoInformations() {
 }
 
 function onEachFeature(feature, layer) {
-	layer.bindPopup(JSON.stringify(feature.properties["scenario" + scenario]["Y" + year]["M" + month])).openPopup();
+	layer.bindPopup(JSON.stringify(feature.properties["Y" + year]["scenario2"]["M" + month])).openPopup();
 }
 
 initMap();
