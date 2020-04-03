@@ -1,0 +1,71 @@
+/* TEAM PAGE STYLE */
+
+.intro {
+    margin: 2em 8em 0em 8em;
+}
+
+.team-container {
+    color: black;
+}
+
+.team {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 8em;
+}
+
+.photo img {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+}
+
+img {
+    margin-left: 0em; 
+    margin-top: 0em;
+}
+
+img:hover {
+    box-shadow: 0 0 3pt 2pt black;
+}
+
+.content {
+    display: none;
+}
+
+.content.is-visible {
+    display: block;
+    position: absolute;
+    margin-top: 5em;
+    left: 15em;
+    right: 15em;
+    animation: opacity 1s;
+}
+
+.others {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 8em;
+}
+
+.organisation,
+.synthese {
+    margin-top: 15em;
+    width: 45%;
+}
+
+.organisation.not-visible,
+.synthese.not-visible {
+    display: none;
+}
+
+@keyframes opacity {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
