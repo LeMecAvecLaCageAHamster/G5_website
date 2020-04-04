@@ -1,0 +1,18 @@
+.project-container {
+    margin: 2em 8em 0em 8em;
+}
+
+.work {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.project,
+.video {
+    width: 45%;
+}
+
+.video {
+    padding: 1em;
+}
