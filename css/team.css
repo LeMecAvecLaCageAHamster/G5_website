@@ -1,18 +1,14 @@
 /* TEAM PAGE STYLE */
 
-.intro {
-    margin: 2em 8em 0em 8em;
-}
-
 .team-container {
     color: black;
+    margin: 2em 8em 0em 8em;
 }
 
 .team {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 0 8em;
 }
 
 .photo img {
@@ -47,7 +43,6 @@ img:hover {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 0 8em;
 }
 
 .organisation,
