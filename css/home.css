@@ -1,0 +1,105 @@
+/* HOMEPAGE STYLE */
+#logoColibri,
+#logoCA {
+    position: absolute;
+    height: 110px;
+    top: 0;
+    transition: transform 1.3s;
+}
+
+#logoCA {
+    margin-left: 15.7em;
+}
+
+#logoColibri {
+    margin-left: 95.7em;
+}
+
+#logoCA:hover,
+#logoColibri:hover {
+    transform: scale(1.1);
+    box-shadow: none;
+}
+
+.menu {
+    display: block;
+    margin-top: 30vh;
+    margin-left: 38vw;
+}
+
+.menuCircle svg {
+    z-index: -1;
+    position: absolute;
+    margin-top: -5em;
+}
+
+img {
+    margin-left: 9em;
+    margin-top: 4em;
+}
+
+.menuItems {
+    display: none;
+}
+
+.menuItems.is-visible {
+    display: block;
+    animation: opacity 2s;
+}
+
+.menuItem:first-of-type {
+    width: 300px;
+    height: 300px;
+    margin-left: -5em;
+    margin-top: -1em;
+}
+
+.menuItem:nth-of-type(2n) {
+    width: 300px;
+    height: 300px;
+    margin-left: 13em;
+    margin-top: -45.5em;
+}
+
+.title {
+    font-size: 1.8em;
+    font-family: "Roboto";
+    color: black;
+    font-weight: 500;
+}
+
+#projectTitle {
+    margin-top: -5.7em;
+}
+
+#teamTitle {
+    margin-top: -7.8em;
+    margin-left: 6.8em;
+}
+
+.campus_track {
+    position: absolute;
+    bottom: 0;
+    margin: 0em 14em 3em 14em;
+    text-align: center;
+    font-size: 1.2em;
+    line-height: 2em;
+}
+
+.campus_track i {
+    font-size: 1.4em;
+    color:#4EA841;
+}
+
+.campus_track .fa-ellipsis-h {
+    margin-bottom: 1.5em;
+}
+
+@keyframes opacity {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giant Mélenchon 2022</title>
+
+    <link rel="icon" type="image/png" href="logo_simple.png" />
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="./css/demo.css" />
+
+    <!-- LeafletJS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+    <!-- Heatmap plugin -->
+    <script src="Leaflet.heat/dist/leaflet-heat.js"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Google Fonts (Roboto) -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.15.0/css/mdb.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <a href="index.html">
+        <img id="logoTeam" src="./img/logo_simple.png" alt="Logo">
+    </a>
+    <div id="map-container">
+        <div id="map"></div>
+
+        <br>
+
+        <!-- Scenario selection -->
+        <label for="months">Scenario : </label>
+        <select id="scenario" class="custom-select" onchange="init()">
+            <option value="1" selected>Le pire</option>
+            <option value="2">Le + pire</option>
+            <option value="3">Le - pire</option>
+        </select>
+
+        <!-- Year selection -->
+        <label for="years">Année : </label>
+        <select id="years" class="custom-select">
+            <option value="1">2006</option>
+            <option value="1">2010</option>
+            <option value="3" selected>2020</option>
+            <option value="4">2030</option>
+            <option value="5">2040</option>
+            <option value="6">2050</option>
+            <option value="7">2060</option>
+            <option value="8">2070</option>
+            <option value="9">2080</option>
+            <option value="10">2090</option>
+            <option value="11">2099</option>
+        </select>
+
+        <label for="months">Mois : </label>
+        <select id="months" class="custom-select">
+            <option value="1" selected>Janvier</option>
+            <option value="1">Février</option>
+            <option value="3">Mars</option>
+            <option value="4">Avril</option>
+            <option value="5">Mai</option>
+            <option value="6">Juin</option>
+            <option value="7">Juillet</option>
+            <option value="8">Août</option>
+            <option value="9">Septembre</option>
+            <option value="10">Octobre</option>
+            <option value="11">Novembre</option>
+            <option value="12">Décembre</option>
+        </select>
+    </div>
+
+</body>
+
+<footer>
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.15.0/js/mdb.min.js"></script>
+
+    <!-- Main script -->
+    <script src="./js/demo.js"></script>
+</footer>
+
+</html>
