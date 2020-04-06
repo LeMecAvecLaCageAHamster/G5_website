@@ -1,14 +1,34 @@
 /* TEAM PAGE STYLE */
 
+#logoTeam {
+    position: absolute;
+    width: 150px;
+    top: 0px;
+    left: 0px;
+    padding: 0.8em;
+    transition: transform 1.3s;
+}
+
+#logoTeam:hover {
+    transform: scale(1.1);
+    box-shadow: none;
+}
+
 .team-container {
     color: black;
-    margin: 2em 8em 0em 8em;
+    margin: 6em 9em 0em 9em;
+    font-size: 1.1em;
 }
 
 .team {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-top: 3em;
+}
+
+.fas {
+    color:#4EA841;
 }
 
 .photo img {
@@ -33,10 +53,10 @@ img:hover {
 .content.is-visible {
     display: block;
     position: absolute;
-    margin-top: 5em;
+    margin-top: 3em;
     left: 15em;
     right: 15em;
-    animation: opacity 1s;
+    animation: opacity 2s;
 }
 
 .others {
@@ -47,8 +67,9 @@ img:hover {
 
 .organisation,
 .synthese {
-    margin-top: 15em;
+    margin-top: 10em;
     width: 45%;
+    animation: opacity 2s;
 }
 
 .organisation.not-visible,
