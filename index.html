@@ -14,6 +14,9 @@
     <!-- LeafletJS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+    <!-- Heatmap plugin -->
+    <script src="Leaflet.heat/dist/leaflet-heat.js"></script>
+
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
     <!-- Google Fonts (Roboto) -->
@@ -34,15 +37,15 @@
 
         <!-- Scenario selection -->
         <label for="months">Scenario : </label>
-        <select id="scenario" class="custom-select" onchange="setGeoInformations()">
-            <option value="1" selected>1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
+        <select id="scenario" class="custom-select" onchange="init()">
+            <option value="1" selected>Le pire</option>
+            <option value="2">Le + pire</option>
+            <option value="3">Le - pire</option>
         </select>
 
         <!-- Year selection -->
         <label for="years">Année : </label>
-        <select id="years" class="custom-select" onchange="setGeoInformations()">
+        <select id="years" class="custom-select" onchange="init()">
             <option value="1">2006</option>
             <option value="1">2010</option>
             <option value="3" selected>2020</option>
@@ -58,7 +61,7 @@
 
         <!-- Month selection -->
         <label for="months">Mois : </label>
-        <select id="months" class="custom-select" onchange="setGeoInformations()">
+        <select id="months" class="custom-select" onchange="init()">
             <option value="1" selected>Janvier</option>
             <option value="1">Février</option>
             <option value="3">Mars</option>
