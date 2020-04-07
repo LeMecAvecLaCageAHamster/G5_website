@@ -23,7 +23,7 @@
 
 .menu {
     display: block;
-    margin-top: 18%;
+    margin-top: 15%;
     margin-left: 38%;
 }
 
@@ -78,7 +78,7 @@ img {
 }
 
 .campus_track {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     margin: 0% 7% 2% 7%;
     text-align: center;
