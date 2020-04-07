@@ -23,8 +23,8 @@
 
 .menu {
     display: block;
-    margin-top: 30vh;
-    margin-left: 38.5vw;
+    margin-top: 12%;
+    margin-left: 35%;
 }
 
 .menuCircle svg {
@@ -80,7 +80,7 @@ img {
 .campus_track {
     position: absolute;
     bottom: 0;
-    margin: 0em 14em 3em 14em;
+    margin: 0% 5% 2% 5%;
     text-align: center;
     font-size: 2vh;
     line-height: 4vh;
@@ -92,7 +92,7 @@ img {
 }
 
 .campus_track .fa-ellipsis-h {
-    margin-bottom: 1.5em;
+    margin-bottom: 1%;
 }
 
 @keyframes opacity {
