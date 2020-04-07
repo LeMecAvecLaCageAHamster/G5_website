@@ -23,8 +23,8 @@
 
 .menu {
     display: block;
-    margin-top: 12%;
-    margin-left: 35%;
+    margin-top: 18%;
+    margin-left: 38%;
 }
 
 .menuCircle svg {
@@ -80,9 +80,9 @@ img {
 .campus_track {
     position: absolute;
     bottom: 0;
-    margin: 0% 5% 2% 5%;
+    margin: 0% 7% 2% 7%;
     text-align: center;
-    font-size: 2vh;
+    font-size: 1.8vh;
     line-height: 4vh;
 }
 
