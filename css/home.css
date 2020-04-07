@@ -8,11 +8,11 @@
 }
 
 #logoCA {
-    margin-left: 15.7em;
+    margin-left: 15vw;
 }
 
 #logoColibri {
-    margin-left: 95.7em;
+    margin-left: 79vw;
 }
 
 #logoCA:hover,
@@ -24,7 +24,7 @@
 .menu {
     display: block;
     margin-top: 30vh;
-    margin-left: 38vw;
+    margin-left: 38.5vw;
 }
 
 .menuCircle svg {
@@ -82,12 +82,12 @@ img {
     bottom: 0;
     margin: 0em 14em 3em 14em;
     text-align: center;
-    font-size: 1.2em;
-    line-height: 2em;
+    font-size: 2vh;
+    line-height: 4vh;
 }
 
 .campus_track i {
-    font-size: 1.4em;
+    font-size: 2.8vh;
     color:#4EA841;
 }
 
