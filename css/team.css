@@ -16,15 +16,16 @@
 
 .team-container {
     color: black;
-    margin: 6em 9em 0em 9em;
-    font-size: 1.1em;
+    margin: 6% 9%;
+    font-size: 1.6vh;
+    height: 100vh;
 }
 
 .team {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-top: 3em;
+    margin-top: 3%;
 }
 
 .fas {
@@ -53,23 +54,24 @@ img:hover {
 .content.is-visible {
     display: block;
     position: absolute;
-    margin-top: 3em;
-    left: 15em;
-    right: 15em;
+    margin-top: 3%;
+    left: 15%;
+    right: 15%;
     animation: opacity 2s;
-}
-
-.others {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
 }
 
 .organisation,
 .synthese {
-    margin-top: 10em;
-    width: 45%;
     animation: opacity 2s;
+}
+
+.organisation {
+    margin-top: 15em;
+}
+
+.synthese {
+    margin-top: 3em;
+    margin-bottom: 3em;
 }
 
 .organisation.not-visible,

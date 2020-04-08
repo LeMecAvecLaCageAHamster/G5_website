@@ -8,11 +8,11 @@
 }
 
 #logoCA {
-    margin-left: 15.7em;
+    margin-left: 15vw;
 }
 
 #logoColibri {
-    margin-left: 95.7em;
+    margin-left: 79vw;
 }
 
 #logoCA:hover,
@@ -23,8 +23,8 @@
 
 .menu {
     display: block;
-    margin-top: 30vh;
-    margin-left: 38vw;
+    margin-top: 15%;
+    margin-left: 38%;
 }
 
 .menu:hover {
@@ -82,21 +82,21 @@ img {
 }
 
 .campus_track {
-    position: absolute;
+    position: fixed;
     bottom: 0;
-    margin: 0em 14em 3em 14em;
+    margin: 0% 7% 2% 7%;
     text-align: center;
-    font-size: 1.2em;
-    line-height: 2em;
+    font-size: 1.8vh;
+    line-height: 4vh;
 }
 
 .campus_track i {
-    font-size: 1.4em;
+    font-size: 2.8vh;
     color:#4EA841;
 }
 
 .campus_track .fa-ellipsis-h {
-    margin-bottom: 1.5em;
+    margin-bottom: 1%;
 }
 
 @keyframes opacity {
