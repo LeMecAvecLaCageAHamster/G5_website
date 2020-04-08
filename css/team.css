@@ -60,17 +60,18 @@ img:hover {
     animation: opacity 2s;
 }
 
-.others {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
 .organisation,
 .synthese {
-    margin-top: 10em;
-    width: 45%;
     animation: opacity 2s;
+}
+
+.organisation {
+    margin-top: 15em;
+}
+
+.synthese {
+    margin-top: 3em;
+    margin-bottom: 3em;
 }
 
 .organisation.not-visible,
