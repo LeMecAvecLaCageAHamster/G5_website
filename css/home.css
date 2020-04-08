@@ -27,6 +27,10 @@
     margin-left: 38vw;
 }
 
+.menu:hover {
+    animation: rotation 2s;
+}
+
 .menuCircle svg {
     z-index: -1;
     position: absolute;
@@ -103,3 +107,12 @@ img {
         opacity: 1;
     }
 }
+
+/* @keyframes rotation {
+    0% {
+        transform: rotateZ(0deg);
+    }
+    100% {
+        transform: rotateZ(60deg);
+    }
+} */

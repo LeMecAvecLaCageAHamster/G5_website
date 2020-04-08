@@ -10,7 +10,7 @@ var layer = L.tileLayer(host, {
 	attribution: attribution,
 	subdomains: 'abcd',
 	minZoom: 0,
-	maxZoom: 20,
+	maxZoom: 5,
 	ext: 'png'
 })
 
@@ -19,18 +19,20 @@ map = L.map('map').setView([0, 0], 2);
 map.addLayer(layer);
 
 function init() {
-	console.log("----- INITIALIZE MAP -----");
+	scenario = $("#scenario").val();
+	year = $("#years").val();
+	month = $("#months").val();
+
+	if (year < 3) {
+		$("#scenario").prop('disabled', true);
+	} else {
+		$("#scenario").prop('disabled', false);
+	}
 	
 	// Get data from JSON and init markers & heatmap
 	$.get('geojson.json', function (data) {
 		geoData = data;
-		console.log(data);
-		
-
-		scenario = $("#scenario").val();
-		year = $("#years").val();
-		month = $("#months").val();
-
+	
 		// ----- Init Heatmap -----
 		// To replace existing heatmarkers with new ones
 		try {
@@ -39,48 +41,63 @@ function init() {
 
 		var heatMapData = [];
 		geoData.features.forEach(function (d) {
-			let temperature = d.properties["Y" + year]["scenario" + scenario]["M" + month].temperature;
-			heatMapData.push([d.geometry.coordinates[1], d.geometry.coordinates[0], temperature / 100]);
-			console.log(temperature / 100);
-		});
+			
+			let temperature;
+			if (year < 3) {
+				temperature = d.properties["Y" + year]["M" + month].temperature;
+			} else {
+				temperature = d.properties["Y" + year]["scenario" + scenario]["M" + month].temperature;
+			}
 
-		heatLayer = L.heatLayer(heatMapData, {
-			minOpacity: 0.5,
-			// gradient: {
-			// 	0: "#000000",
-			// 	0.2: "#570000",
-			// 	0.4: "#ff0000",
-			// 	0.6: "#ffc800",
-			// 	0.8: "#ffff00",
-			// 	1: "#eee"
-			// }
-			gradient: {
-				0: "#000000",
-				0.2: "#570000",
-				0.4: "#ff0000",
-				0.6: "#ffc800",
-				0.8: "#ffff00",
-				1: "#eee"
+			for (let i = 0; i < temperature; i++) {
+				heatMapData.push([d.geometry.coordinates[1]+i/200, d.geometry.coordinates[0]+i/200, temperature / 100]);				
 			}
 		});
 
-		map.addLayer(heatLayer, { max: 20 });
+		heatLayer = L.heatLayer(heatMapData, {
+			minOpacity: .5,
+			max: 2,
+			gradient: {
+				0: "green",
+				0.5: "yellow",
+				0.75: "red",
+				1: "blue",
+			}
+		});
 
-		// ----- Add markers -----
-		// To replace existing markers with new ones
-		try {
-			map.removeLayer(geoLayer);
-		} catch (error) { }
-
-		geoLayer = L.geoJSON(geoData, { onEachFeature: onEachFeature }).addTo(map);
+		map.addLayer(heatLayer);
 	}, "json");
 
 }
 
-
-function onEachFeature(feature, layer) {
-	layer.bindPopup(JSON.stringify(feature.properties["Y" + year]["scenario2"]["M" + month])).openPopup();
-}
-
 // ----------------------------------------------
 init();
+
+console.log(`                             *(#%&%(/.                                          
+                    (&&&&&&&%/.     ,(%&&&&&&&,                                 
+               *&&&&/                         #&&&&.                            
+            %&&&.                                 /&&&*                         
+         *&&&                                        ,&&&                       
+       (&&*             .(((((((                (((,    %&&.                    
+     ,&&*             (((((((((((((((  ..     ((((((      %&&                   
+    %&%        .(((/*(((((((((((((((((((((((((((((((((((((((&&*                 
+   &&(    ((((((((((((((((((((((((((((((((((((##((((((((((*  &&/   ,,..((((     
+  &&(  .((((((((((((((((((((((((((((((((((((((%#(((((((((((((((((((((       //  
+ /&&  .((((((((((((#((((((((((((((((((((((###&#%((((((((((((((((((((            
+ &&*    ((((((((((#&###%(#####%&###########&&######(((((*      ##/             /
+ &&  ((((((((((((###&%&%#%&&%%####&&&&&%(((((((((((((((((      /&%         .//* 
+.&& ,(((((((&########%&#######%%&####(((##((((((#((#(((((((((((((&     *        
+ &&   (((((((#&&%#####&#####&&####%###(((((((((%#(((((((((     (&%              
+ &&(    /(((((((&%####%&&&&&&&&&&&&&&#(((((##&#((((#%#((*      &&/              
+ ,&&    *(((((((((((#&&&&&&&&&%##(((((#%%#((((#&&%##(((.    .///# .             
+  %&&    (((((((((((((%&&&&&(((((((((((((((((((((((((((/(((*  &&                
+   %&&       .. ,(((((%&&&&%((((   ,,   /((((((((((/        .#&, *,             
+    (&&            /(#&&&&&(/*     (                       #&&   ///            
+      &&%           .&&&&&.                              .&&(  .**              
+        &&&         *&&&&&/                            ,&&%                     
+          %&&/      #&&&&&&%                         %&&/                       
+            .&&&#//&&&&&&&&&&&&,                 ,&&&#                          
+                *&&&&&&&&&&&&&&&&&&&&%(, ,/#%&&&&&.                             
+					 ,%&&&&&&&&&&&&&&&&&&&&&(.    
+						                              
+						FOR A BETTER WORLD`);

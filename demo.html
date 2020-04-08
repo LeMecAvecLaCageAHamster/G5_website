@@ -38,16 +38,16 @@
         <!-- Scenario selection -->
         <label for="months">Scenario : </label>
         <select id="scenario" class="custom-select" onchange="init()">
-            <option value="1" selected>Le pire</option>
-            <option value="2">Le + pire</option>
-            <option value="3">Le - pire</option>
+            <option value="3" selected>Ça passe</option>
+            <option value="1">'Fait chaud là, non ?</option>
+            <option value="2">On va juste mourir en fait</option>
         </select>
 
         <!-- Year selection -->
         <label for="years">Année : </label>
-        <select id="years" class="custom-select">
+        <select id="years" class="custom-select" onchange="init()">
             <option value="1">2006</option>
-            <option value="1">2010</option>
+            <option value="2">2010</option>
             <option value="3" selected>2020</option>
             <option value="4">2030</option>
             <option value="5">2040</option>
@@ -60,7 +60,7 @@
         </select>
 
         <label for="months">Mois : </label>
-        <select id="months" class="custom-select">
+        <select id="months" class="custom-select" onchange="init()">
             <option value="1" selected>Janvier</option>
             <option value="1">Février</option>
             <option value="3">Mars</option>
